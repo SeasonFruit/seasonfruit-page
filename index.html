@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>시즌프룻 | 제철과일 공동구매</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", sans-serif;
+      background: #fff7ee;
+      color: #333;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0 4px;
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: #ffa447;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    .logo-icon span {
+      font-size: 22px;
+    }
+    .brand-name {
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .brand-sub {
+      font-size: 12px;
+      color: #777;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #ffa447;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(255,164,71,0.6);
+    }
+    .btn-outline {
+      border: 1px solid #ffa447;
+      color: #333;
+      background: transparent;
+    }
+
+    .hero {
+      padding: 20px 0 12px;
+    }
+    .hero-title {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+    .hero-title span {
+      color: #ffa447;
+    }
+    .hero-desc {
+      margin-top: 10px;
+      color: #555;
+      font-size: 14px;
+    }
+    .hero-actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill-list {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: #555;
+    }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fff1c7;
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 16px;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 700px) {
+      .product-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .product-card {
+      padding: 10px;
+      border-radius: 12px;
+      background: #fff7ee;
+    }
+    .product-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .product-desc {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+    .product-bottom {
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+    .price {
+      font-weight: 700;
+    }
+    .badge {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #7cc86c;
+      color: #fff;
+    }
+
+    .how-step {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: #555;
+    }
+    .how-step-num {
+      min-width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #ffa447;
+      color: #fff;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .small {
+      font-size: 12px;
+      color: #777;
+      line-height: 1.5;
+    }
+    .link {
+      color: #ffa447;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0 10px;
+      font-size: 11px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 헤더 -->
+    <header>
+      <div class="logo-box">
+        <div class="logo-icon"><span>🍊</span></div>
+        <div>
+          <div class="brand-name">SeasonFruit</div>
+          <div class="brand-sub">제철과일 공동구매 · 산지직송</div>
+        </div>
+      </div>
+
+      <!-- 카카오채널 보류 → 버튼 제거 처리 -->
+      <!-- <a href="https://pf.kakao.com/CHANNEL_ID" class="btn btn-outline" target="_blank">카톡문의</a> -->
+    </header>
+
+    <!-- 히어로 -->
+    <section class="hero">
+      <div class="hero-title">
+        동네 아파트<br />
+        <span>제철과일 공동구매</span> 시즌프룻
+      </div>
+      <div class="hero-desc">
+        산지에서 직접 선별한 과일만 골라<br />
+        아파트 단지별로 한 번에 배송합니다.<br />
+        당일 검수 · 합리적인 공동구매 가격 · 편한 문앞 픽업
+      </div>
+
+      <div class="hero-actions">
+        <a
+          href="https://forms.gle/fGsVq5yKotBKKG2o7"
+          class="btn btn-primary"
+          target="_blank"
+        >
+          ✏️ 주문하기 (구글폼)
+        </a>
+        <a href="#pay" class="btn btn-outline">
+          💳 결제/입금 안내 보기
+        </a>
+      </div>
+
+      <div class="pill-list">
+        <div class="pill">📦 산지 직송</div>
+        <div class="pill">🍇 당일 검수 후 선별</div>
+        <div class="pill">🏷️ 공동구매 특가</div>
+        <div class="pill">📱 배송 안내 문자</div>
+      </div>
+    </section>
+
+    <!-- 이번 주 공동구매 상품 -->
+    <section class="section" id="products">
+      <h2>🍉 이번 주 공동구매 상품</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <div class="product-name">샤인머스켓 1kg</div>
+          <div class="product-desc">프리미엄 선별 · 탱글한 식감 · 아이 간식 추천</div>
+          <div class="product-bottom">
+            <div class="price">₩12,900</div>
+            <div class="badge">인기</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">성주 꿀수박 (미니)</div>
+          <div class="product-desc">높은 당도 · 1~2인 가구에 딱 맞는 사이즈</div>
+          <div class="product-bottom">
+            <div class="price">₩14,900</div>
+            <div class="badge">한정 수량</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">제주 감귤 5kg</div>
+          <div class="product-desc">새콤달콤 · 가족 간식용 베스트셀러</div>
+          <div class="product-bottom">
+            <div class="price">₩13,500</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">바나나 1.5kg</div>
+          <div class="product-desc">매일 먹기 좋은 기본 과일, 가성비 최고</div>
+          <div class="product-bottom">
+            <div class="price">₩3,900</div>
+          </div>
+        </div>
+      </div>
+      <p class="small" style="margin-top:8px;">
+        ※ 실제 판매 상품/가격은 공동구매마다 달라질 수 있습니다. 구글폼에 기재된 가격이 기준입니다.
+      </p>
+    </section>
+
+    <!-- 이용 방법 -->
+    <section class="section">
+      <h2>📦 이용 방법</h2>
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div>
+          <b>구글폼에서 주문서 작성</b><br />
+          원하는 상품 / 수량 / 동·호수 / 연락처를 입력해 주세요.
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div>
+          <b>입금 또는 결제하기</b><br />
+          아래 결제/입금 안내에 따라 결제해 주세요.
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div>
+          <b>배송 & 픽업</b><br />
+          공동구매 마감 후 한 번에 입고/검수하여 아파트 <b>정문·택배보관함·지정 장소</b>에 일괄 배송됩니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- 결제/입금 안내 -->
+    <section class="section" id="pay">
+      <h2>💳 결제 / 입금 안내</h2>
+      <p class="small">
+        <b>계좌 이체 시:</b><br /><br />
+        은행: <b>농협은행</b><br />
+        계좌번호: <b>351-0732-8244-83</b><br />
+        예금주: <b>박성욱</b><br /><br />
+
+        이 계좌로 주문 금액을 입금해 주세요.<br />
+        입금자명은 주문자명과 동일하게 부탁드립니다 🙏
+        <br /><br />
+
+        <b>카드 결제</b>를 원하시는 경우,<br />
+        주문 후 사장님이 보내드리는 결제 링크를 이용하실 수 있습니다.
+      </p>
+    </section>
+
+    <!-- 수령 안내 -->
+    <section class="section">
+      <h2>🚚 배송 / 픽업 안내</h2>
+      <p class="small">
+        · 공동구매 마감 후, 입고/검수 과정을 거쳐 <b>다음날 저녁</b> 일괄 배송됩니다.<br />
+        · 수령 장소: <b>아파트 정문 택배 보관장 앞 (임시 테이블 운영)</b><br />
+        · 수령 가능 시간: <b>19:00 ~ 21:00</b><br /><br />
+
+        ⚠️ 신선식품 특성상, 당일 수령을 권장드립니다.
+      </p>
+    </section>
+
+    <!-- 연락 정보 -->
+    <section class="section">
+      <h2>📞 문의 & 시즌프룻 정보</h2>
+      <p class="small">
+        · 사장님 이름: <b>박성욱</b><br />
+        · 연락처: <b>010-2439-9708</b><br />
+        · 카카오채널: (추후 연결 예정)<br />
+        · 인스타그램: (추후 연결 예정)<br />
+        . 사업자 정보:
+      </p>
+    </section>
+
+    <footer>
+      © SeasonFruit 시즌프룻 · 제철과일 공동구매
+    </footer>
+  </div>
+
+</body>
+</html>
